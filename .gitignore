@@ -1,0 +1,7 @@
+## gitignore
+#
+
+# python
+*.pyc
+*.egg-info/
+__pycache__/
