@@ -14,4 +14,9 @@ setup(
         license='GNU GPL v3',
         url="https://gitlab.labs.nic.cz/turris/sentinel/sview",
         packages=find_packages(),
+        entry_points={
+            'console_scripts': [
+                'christmas=christmas.__main__:main'
+            ]
+        },
 )
