@@ -1,10 +1,6 @@
-#!/usr/bin/env python3
-# Script to shine Turris Omnia like a christmas tree
-#
-# author: Vojtech Myslivec <vojtech@xmyslivec.cz>
-# inspired by:
-#  - CZ.NIC, z.s.p.o. (https://doc.turris.cz/doc/en/howto/led_settings)
-#
+"""
+Christmas main module
+"""
 
 import sys
 import signal
@@ -88,7 +84,3 @@ def main():
         sleep(random_sleep)
 
     cleanup()
-
-
-if __name__ == "__main__":
-    main()
