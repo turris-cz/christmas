@@ -5,8 +5,7 @@ Miscellaneous helpers for christmas
 import sys
 import signal
 
-from .exceptions import ChristmasError
-from .rainbow import restart_leds, device_leds_list
+from .rainbow import restart_leds
 
 
 USAGE = """USAGE:
@@ -36,11 +35,3 @@ def trap_signals():
     signal.signal(signal.SIGINT, signal_handler)
     signal.signal(signal.SIGHUP, signal_handler)
     signal.signal(signal.SIGTERM, signal_handler)
-
-
-def get_leds_list():
-    try:
-        return device_leds_list()
-    except (FileNotFoundError, PermissionError, ChristmasError) as e:
-        errprint("error: Can not determine LED list: {}".format(e))
-        sys.exit(2)
