@@ -15,7 +15,7 @@ setup(
         url="https://gitlab.labs.nic.cz/turris/sentinel/sview",
         packages=find_packages(),
         install_requires=[
-            "pyuci",
+            "pyuci>=0.6",
         ],
         entry_points={
             'console_scripts': [
