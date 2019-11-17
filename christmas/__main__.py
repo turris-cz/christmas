@@ -7,18 +7,17 @@ from time import sleep
 
 from .helpers import usage, trap_signals, cleanup
 from .rainbow import disable_leds, set_led
+from .config import Config
 
-from .default_settings import COLORS, ENABLE_PROBABILITY, LEDS, SLEEP_MAX
 
-
-def blink():
-    if random() < ENABLE_PROBABILITY:
+def blink(conf):
+    if random() < conf.enable_probability:
         random_state = "enable"
     else:
         random_state = "disable"
 
-    random_led = choice(LEDS)
-    random_color = choice(COLORS)
+    random_led = choice(conf.leds)
+    random_color = choice(conf.colors)
 
     set_led(random_led, random_state)
     set_led(random_led, random_color)
@@ -26,12 +25,13 @@ def blink():
 
 def main():
     usage()
+    conf = Config()
     trap_signals()
     disable_leds()
 
     while True:
-        blink()
-        random_sleep = random() * SLEEP_MAX
+        blink(conf)
+        random_sleep = random() * conf.sleep_max
         sleep(random_sleep)
 
     cleanup()
