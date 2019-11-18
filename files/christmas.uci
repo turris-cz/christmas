@@ -1,0 +1,7 @@
+config christmas "christmas"
+	#option enable_probability '0.7'
+	#option sleep_max '3'
+	#list colors '00FF00'
+	#list colors '0000AA'
+	#list colors 'FF6600'
+	#list colors 'FF0000'
