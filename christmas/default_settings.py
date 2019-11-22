@@ -15,19 +15,3 @@ COLORS = (
         "FF6600", # yellow
         "FF0000", # red
 )
-
-# list of Turris Omnia leds
-LEDS = (
-        'pwr',
-        'lan0',
-        'lan1',
-        'lan2',
-        'lan3',
-        'lan4',
-        'wan',
-        'pci1',
-        'pci2',
-        'pci3',
-        'usr1',
-        'usr2',
-)

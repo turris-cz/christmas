@@ -4,7 +4,7 @@ Config handler for christmas
 
 import euci
 
-from .default_settings import COLORS, ENABLE_PROBABILITY, LEDS, SLEEP_MAX
+from .default_settings import COLORS, ENABLE_PROBABILITY, SLEEP_MAX
 from .helpers import errprint
 
 
@@ -23,7 +23,6 @@ class Config:
     def _prepare_defaults(self):
         self.colors = COLORS
         self.enable_probability = ENABLE_PROBABILITY
-        self.leds = LEDS
         self.sleep_max = SLEEP_MAX
 
     def _load_uci(self):
