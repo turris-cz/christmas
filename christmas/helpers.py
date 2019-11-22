@@ -2,8 +2,8 @@
 Miscellaneous helpers for christmas
 """
 
-import sys
 import signal
+import sys
 
 from .rainbow import restart_leds
 

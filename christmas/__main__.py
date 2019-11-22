@@ -5,9 +5,9 @@ Christmas main module
 from random import random, choice
 from time import sleep
 
+from .config import Config
 from .helpers import usage, trap_signals, cleanup
 from .rainbow import disable_leds, set_led
-from .config import Config
 
 
 def blink(conf):
