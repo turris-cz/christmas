@@ -35,3 +35,9 @@ def trap_signals():
     signal.signal(signal.SIGINT, signal_handler)
     signal.signal(signal.SIGHUP, signal_handler)
     signal.signal(signal.SIGTERM, signal_handler)
+
+
+def first_line_of_file(filename):
+    with open(filename, "r") as f:
+        line = f.readline()
+    return line.rstrip("\n")

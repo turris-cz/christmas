@@ -4,7 +4,11 @@ Router classes and factory
 
 from random import random, choice
 
+from .exceptions import ChristmasError
+from .helpers import first_line_of_file
 from .rainbow import set_led
+
+SYSINFO_MODEL_FILE = "/tmp/sysinfo/model"
 
 OMNIA_LEDS = (
         "pwr",
@@ -72,3 +76,16 @@ class TurrisRouter(Router):
 
         set_led(random_led, random_state)
         set_led(dev_name_for_color, random_color)
+
+
+def router_factory(conf):
+    routers = {
+        "Turris Omnia": OmniaRouter,
+        "Turris": TurrisRouter,
+    }
+
+    model_name = first_line_of_file(SYSINFO_MODEL_FILE)
+    try:
+        return routers[model_name](conf)
+    except KeyError:
+        raise ChristmasError("Device not supported")

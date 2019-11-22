@@ -8,13 +8,13 @@ from time import sleep
 from .config import Config
 from .helpers import usage, trap_signals, cleanup
 from .rainbow import disable_leds
-from .router import OmniaRouter
+from .router import router_factory
 
 
 def main():
     usage()
     conf = Config()
-    router = OmniaRouter(conf)
+    router = router_factory(conf)
 
     trap_signals()
     disable_leds()
