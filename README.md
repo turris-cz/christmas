@@ -7,9 +7,9 @@ Shine Turris Omnia like a Christmas tree.
 
 A Python daemon for Turris Omnia to blink its RGB LEDs like a Christmas tree.
 
-Only *Omnia* is supported because MOX does not have RGB LED(s) and *Turris 1.x*
-LAN leds can not be controlled separately (5 out of 8 diodes must share the
-same color).
+Only *Turris 1.x* and *Omnia* routers are supported because MOX does not have RGB LED(s).
+*Turris 1.x* LAN leds share the color settings (5 out of 8 diodes have the same
+color) so the effect is not so impressive there.
 
 
 ---
